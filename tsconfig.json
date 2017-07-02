@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "target": "es2015",
+        "lib": ["es2015", "dom", "es2016"],
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "alwaysStrict": true,
+        "outDir": "dist/js/",
+        "removeComments": true,
+        "watch": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    },
+    "include": [
+        "src/ts/**/*"
+    ],
+    "compileOnSave": true
+}
