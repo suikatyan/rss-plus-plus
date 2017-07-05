@@ -36,7 +36,7 @@ define(["require", "exports", "formatter/Formatter"], function (require, exports
             return $item.children("title").text();
         }
         getPageLink($item) {
-            return $item.children("id").text();
+            return $item.children("link").attr("href");
         }
         getPageDescription($item) {
             return $item.children("summary").text();
