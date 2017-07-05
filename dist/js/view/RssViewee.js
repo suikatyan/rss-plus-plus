@@ -35,7 +35,7 @@ define(["require", "exports", "view/Viewee"], function (require, exports, Viewee
                 return;
             }
             for (let i = RssViewee.MAX_ITEM_COUNT; i < itemCount; i++) {
-                $(".item").eq(RssViewee.MAX_ITEM_COUNT).remove();
+                $(".item").eq(0).remove();
             }
         }
         scroll() {
