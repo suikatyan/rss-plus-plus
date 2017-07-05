@@ -43,7 +43,7 @@ export default class Atom extends Formatter {
   }
 
   private getPageLink($item: JQuery): string {
-    return $item.children("id").text();
+    return $item.children("link").attr("href");
   }
 
   private getPageDescription($item: JQuery): string {
