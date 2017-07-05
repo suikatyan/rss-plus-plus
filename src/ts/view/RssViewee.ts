@@ -37,7 +37,7 @@ export default class RssViewee extends Viewee {
     }
 
     for (let i = RssViewee.MAX_ITEM_COUNT; i < itemCount ; i++) {
-      $(".item").eq(RssViewee.MAX_ITEM_COUNT).remove();
+      $(".item").eq(0).remove();
     }
   }
 
