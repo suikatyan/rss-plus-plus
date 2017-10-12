@@ -69,3 +69,7 @@ a:link, a:visited, a:hover {
 .unread > a {
   color: tomato !important;
 }
+
+.hatena {
+  color: #4c5a67;
+}

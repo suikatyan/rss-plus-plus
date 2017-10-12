@@ -22,6 +22,7 @@ define(["require", "exports", "view/Viewee"], function (require, exports, Viewee
                     template = this.replace(template, "title", item.title);
                     template = this.replace(template, "siteTitle", item.siteTitle);
                     template = this.replace(template, "link", item.link);
+                    template = this.replace(template, "hatenaLink", `http://b.hatena.ne.jp/entry/${item.link}`);
                     const $item = $(template).appendTo("#main");
                     $item.on("mousemove", () => {
                         $item.removeClass("unread");
@@ -58,6 +59,6 @@ define(["require", "exports", "view/Viewee"], function (require, exports, Viewee
             $("#update-time").text(`最終更新日時：${this.getDateString(new Date())}`);
         }
     }
-    RssViewee.MAX_ITEM_COUNT = 200;
+    RssViewee.MAX_ITEM_COUNT = 4000;
     exports.default = RssViewee;
 });

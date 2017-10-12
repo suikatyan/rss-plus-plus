@@ -6,7 +6,7 @@ interface OutputItem extends RssItem {
 }
 
 export default class RssViewee extends Viewee {
-  static MAX_ITEM_COUNT = 200;
+  static MAX_ITEM_COUNT = 4000;
   private template: string;
 
   public async push(data: OutputItem | OutputItem[]): Promise<void> {
@@ -22,6 +22,13 @@ export default class RssViewee extends Viewee {
       template = this.replace(template, "title", item.title);
       template = this.replace(template, "siteTitle", item.siteTitle);
       template = this.replace(template, "link", item.link);
+      template = this.replace(template, "hatenaLink", `http://b.hatena.ne.jp/entry/${item.link}`);
+      // template = this.replace(
+      //   template,
+      //   "hatenaCount",
+      //   await (await fetch(`http://api.b.st-hatena.com/entry.count?url=${item.link}`)).text()
+      // );
+
 
       const $item = $(template).appendTo("#main");
       $item.on("mousemove", () => {
